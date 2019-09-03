@@ -50,8 +50,51 @@
 		}
 		
 	</style>
-	
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+
+<script language="JavaScript" src="common/awardSearch.js"></script>
+
+<script language="JavaScript">
+var printFlag = false;
+
+function printThisPage() {
+  document.getElementById('printFriendly').style.display='none';
+  document.getElementById('printFriendly2').style.display='none';
+  document.getElementById('printFriendly3').style.display='none';
+  document.getElementById('printFriendly5').style.display='none';
+  document.getElementById('printFriendly51').style.display='none';
+  document.getElementById('printFriendly6').style.display='none';
+  document.getElementById('printFriendly7').style.display='block';
+ 
+  //if (navigator.appName=="Microsoft Internet Explorer"){
+  //  window.print();
+  //}
+  //else{
+    //window.refresh();
+    window.print();
+  //}
+  
+  opener.printFlag = false;
+}
+
+function popwin(url)
+{
+   //alert('popwin url = ' + url);
+   var hNewWnd = window.open(url,"","width=520,height=590,left=480,resizable=yes,status=yes,scrollbars=yes");
+   if ((document.window != null) && (!hNewWnd.opener))
+       hNewWnd.opener = document.window;
+}
+function printerFriendlyView()
+   {   
+   printFlag = true;
+   var printerFriendlyViewWin = window.open(document.URL, "printerFriendlyViewWin","menubar=1,toolbar=0,scrollbars=1,alwaysRaised=1,width=600,height=600,resizable=1");
+   }
+</script>
+<script type="text/javascript" src="js/Universal-Federated-Analytics.1.0.js?agency=NSF"></script>
+<script async id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NSF&ver=true&exts=doc,docx,xls,xlsx,xlsm,ppt,pptx,exe,zip,pdf,js,txt,csv,dxf,wmv,jpg,wma,mov,avi,mp3,mp4,csv" type="text/javascript" ></script>
 </head> 
+
+
 <body> 
 	<table>
 		<!-- title -->
@@ -97,7 +140,7 @@ Li, Bing and Song, Linghao and Chen, Fan and Qian, Xuehai and Chen, Yiran and Li
                        <!-- 
                          document.write("<a onclick=\"dcsMultiTrack('DCS.dcsuri', '/PA_NSFgov Award Search_DOI link', 'WT.dl','100');\" href=\"javascript:popwin('http://dx.doi.org/10.23919/DATE.2018.8342118')\">doi:10.23919/DATE.2018.8342118</a>");    
                                  //-->
-                 </script><noscript><a href="doiUrl" target="_blank">doiID</a></noscript>
+                 </script><noscript><a href="doiUrl" >doiID</a></noscript>
 &nbsp;<script type="text/javascript">
 
                        <!-- 
